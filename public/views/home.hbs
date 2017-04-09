@@ -1,0 +1,152 @@
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<nav class="navbar navbar-default navbar-fixed-top " role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="page-scroll"><a href="#home">Home</a></li>
+        <li class="active page-scroll"><a href="#about">About</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="https://resume.creddle.io/resume/9dkcck7ih11" target="_blank">Resume</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active page-scroll">
+          <a href="#contact" id="contact-link"><b><i class="fa fa-envelope" aria-hidden="true"></i></b></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <section id="home">
+        <div class="text-center pagination-centered container" id="intro">
+        <div class="outer">
+          <div class="bg">
+            <div class="inner">
+              <h1>Randal Staewen</h1>
+            </div>
+          </div>
+        </div>
+    <img src="/img/line.png" />
+        <h2>Award-Winning Game Developer</h2>
+</div>
+    <br />
+    <div class="arrow animated bounce page-scroll"><a href="#about">
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+  </div></a>
+</section>
+
+<!--
+==========================================
+    A B O U T   M E   S E C T I O N
+=========================================== -->
+<section id="about">
+    <div class="container content">
+        <h1>Who is Randal Staewen?</h1>
+        <p>Hi I'm Randal and I'm a developer. I like making games and stuff and I think I'm pretty good at it.
+            <br />
+        Something something Unity3D, something Imagine Cup, something Steam Greenlight, blah blah apps in Google Play store. (You can learn more about what I know by giving my <a href="https://resume.creddle.io/resume/9dkcck7ih11"><strong>resume</strong></a> a glance.)
+        <br />
+        <br />
+        Lorem ipsum dolor sit amet, consectetuer adipiscing
+        elit. Aenean commodo ligula eget dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient
+        montes, nascetur ridiculus mus. Donec quam felis,
+        ultricies nec, pellentesque eu, pretium quis, sem.
+        </p>
+        <img src="/img/unnaturalselection.png" width="250" />
+        <img src="/img/insomnia.png" width="250" />
+        <br />
+        <a href="/portfolio" class="text-center"><h1>View Portfolio</h1></a>
+    </div>
+    <br />
+    <div class="arrow animated bounce page-scroll"><a href="#contact" class="page-scroll">
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </div></a>
+</section>
+
+<!--
+==========================================
+    C O N T A C T   S E C T I O N
+=========================================== -->
+<section id="contact">
+    <div class="container content">
+        <form action="mailto:rstaewen@gmail.com" method="post">
+            <h1>Get In Touch</h1>
+            <h4>Hey, thanks for being here.
+                <br />
+                <br />I'd love to talk to you if you want to work together or if you've just got something you wanna say! Feel free to send me an email at  <a href="mailto:rstaewen@gmail.com">rstaewen[at]gmail.[dot]com</a></h4>
+          <!-- <fieldset>
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name" />
+                <br />
+                <label for="subject">Subject:</label>
+                <input type="subject" class="form-control" id="subject" placeholder="What are you mailin' about?" />
+                <br />
+                <label for="message">Message:</label>
+                <textarea id="message" class="form-control" placeholder="What's on your mind?" width="200"></textarea>
+                <br />
+                <input class="button" type="submit" value="Send message"/>
+            </fieldset> -->
+        </form>
+        <hr />
+            <div class="content text-center">
+        <h2>Or Follow Me:</h2>
+
+                <a href='https://www.facebook.com/rstaewen'><i class="fa fa-facebook fa-3x fa-fw"></i></a>
+                <a href="http://instagram.com/randalstaewen"><i class="fa fa-instagram fa-3x fa-fw"></i></a>
+                <a href="http://linkedin.com/in/rstaewen"><i class="fa fa-linkedin fa-3x fa-fw"></i></a>
+      </div>
+    </div>
+</section>
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to the top" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+//Fade-In Navbar
+    $(".navbar").hide();
+    $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $(".navbar").fadeIn();
+            } else {
+                $(".navbar").fadeOut();
+            }
+        });
+        $(".page-scroll").on("click", "a", function(event){
+            event.preventDefault();
+
+        $("html, body").animate({
+            scrollTop: $( $.attr(this, "href") ).offset().top
+        }, 500);
+        });
+        $(window).scroll(function () {
+               if ($(this).scrollTop() > 50) {
+                   $("#back-to-top").fadeIn();
+               } else {
+                   $("#back-to-top").fadeOut();
+               }
+           });
+        $("#back-to-top").click(function () {
+            $("#back-to-top").tooltip("hide");
+            $("body,html").animate({
+                scrollTop: 0
+            }, 800);
+            // $(".navbar").addClass("show");
+            return false;
+        });
+
+        $("#back-to-top").tooltip("show");
+
+});
+//Scroll to the Top
+
+</script>
